@@ -1,0 +1,5 @@
+# ignore avatar files
+*avatar*
+
+# ignore data folder
+data/

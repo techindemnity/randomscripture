@@ -1,0 +1,121 @@
+.scr{
+    font-weight: bold;
+    padding-left: 1em;
+    background-color: lemonchiffon;
+    padding-top, padding-bottom: 5px;
+}
+.scro{
+    font-weight: bold;
+    padding-left: 1em;
+}
+.details {
+    padding: 1em;
+    color: steelblue ;
+    font-style: italic;
+    font-size: small;
+}
+.trueout{
+    display: none;
+}
+.heroImg{
+    height: 200px;
+    opacity: .5;
+    border-radius: 200px;
+    margin-left: 2em;
+}
+
+.wrapper {text-align: center;}
+
+blockquote {
+    position: relative;
+    margin: 0 auto;
+    max-width: 500px;
+    font-style: italic;
+    margin-left: 1em;
+    font-family: Georgia, "Times New Roman", serif;
+    color: #C5A39E;
+    font-weight: bold;
+    display:inline-block
+}
+blockquote:before {
+  position: absolute;
+  content: open-quote;
+  font-size: 4em;
+  margin-left: -0.6em;
+  margin-top: -0.4em;
+}
+blockquote:after {
+  position: absolute;
+  content: close-quote;
+  font-size: 4em;
+  bottom: 0;
+  right: 0;
+  margin-right: -0.2em;
+  margin-bottom: -0.8em;
+}
+blockquote p {
+    display: inline;
+    text-align: left;
+}
+
+img{
+    align: top;
+    height: 200px;
+    margin-left: 2em;
+    border-radius: 30px;
+}
+#aiImg{
+    width: 100%;
+    height: auto;
+}
+
+#Content{
+    text-align: center;
+    align-content: center;
+    margin-top, margin-bottom: 2em;
+    min-width: 100%;
+    display: inline-block;
+}
+#txtContent{
+    width: 55%;
+    display: inline-block;
+    text-align: left;
+    padding: 1em;
+    margin: 1.25em;
+    border-width: 1px;
+    border-color: black;
+    border-style: solid
+    vertical-align: top;
+    min-width: 460px;
+}
+#imgContent{
+    width:35%;
+    display: inline-block;
+    text-align: left;
+    padding: 1em;
+    margin: 1.25em;
+    vertical-align: top;
+    min-width: 460px;
+}
+#header{
+    text-align: center;
+    color: #9CA7AD;
+}
+#pBtn{
+    text-align: left;
+    padding-top: 3em;
+}
+#ai{
+    width: 85%;
+    heigh: auto;
+}
+article{
+    margin-top: 3em;
+}
+#footer{
+    padding-top: 3em;
+    padding-bottom: 2em;
+}
+#midFooter{
+    background-color: #E9ECEF;
+}
