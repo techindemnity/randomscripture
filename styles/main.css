@@ -96,7 +96,7 @@ img{
     margin: 1.25em;
     vertical-align: top;
     min-width: 460px;
-    
+
 }
 #header{
     text-align: center;
@@ -119,4 +119,10 @@ article{
 }
 #midFooter{
     background-color: #E9ECEF;
+}
+
+iframe{
+    margin-bottom: 3em;
+    padding-bottom: em;
+    height: 200px
 }
