@@ -89,14 +89,23 @@
           <div class="card" style="width: 75%">
             <div class="card-body">
               <h5 class="card-title" id="book"></h5>
-              <p class="card-text" id="output">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
+              <p class="card-text" id="output"></p>
               <p class="card-text" id="ai"></p>
-              <a href="#" class="btn btn-primary">More About This Verse</a>
+              <a id="btnDetails" href="#" class="btn btn-primary" role="button"
+                >More About This Verse</a
+              >
               <a class="btn btn-primary" id="btnGet" href="#" role="button">
-                Get Another Random Verse
+                <span id="btnShow1">Get Another Random Verse</span>
+                <div id="activity1">
+                  <span
+                    class="spinner-border spinner-border-sm"
+                    role="status"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden" aria-hidden="true"
+                    >Loading...</span
+                  >
+                </div>
               </a>
             </div>
             <img
@@ -141,7 +150,7 @@
         <div class="col-md-2"></div>
       </div>
     </div>
-    <hr/>
+    <hr />
     <iframe
       style="width: 98%"
       scrolling="no"

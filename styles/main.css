@@ -24,14 +24,20 @@
     margin-left: 2em;
 }
 
-.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+.btn-primary, .btn-primary:visited {
     background-color: #C5A39E !important;
 }
+.btn-primary:hover, .btn-primary:active{
+    background-color: #9CA7AD !important;
+}
+
 
 .wrapper {text-align: center;}
 
 .card-text{
     font-size: 25px;
+    text-align: justify;
+    text-justify: inter-word;
 }
 .card-title
 {
@@ -131,7 +137,6 @@ img{
     padding-top: 3em;
 }
 #ai{
-    width: 85%;
     heigh: auto;
 }
 article{

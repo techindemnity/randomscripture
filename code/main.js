@@ -23,9 +23,20 @@ if (!b) {
 }
 else {
     document.getElementById("btnGet").addEventListener("click", async () => {
-        getPassage()
+        document.getElementById("activity1").style.display = 'inline'
+        document.getElementById("btnShow1").style.display = 'none'
+        getPassage().then(
+            d =>{
+                document.getElementById("activity1").style.display = 'none'
+                document.getElementById("btnShow1").style.display = 'inline'
+            }
+        ).catch(e => {
+            console.log(e)
+        })
     })
 }
+
+document.getElementById("activity1").style.display = 'none'
 
 OpenaiFetchCache()
 .then(data => {
@@ -35,14 +46,29 @@ OpenaiFetchCache()
 })
 
 async function getPassage() {
-    clearContent()
-    OpenaiFetchRandomBible().then(data => {
-        OpenaiFetchWriteCache(data.vid, data.verse, data.book_name, data.inter, data.img)
-        .then(data =>{
-            //setContent()
-        }).catch(e => { console.log("error. " + e)})
-        autoResize("output")
-    }).catch(e => console.log("error. " + e))
+    return new Promise((resolve, reject)=>{
+        try{
+            clearContent()
+            OpenaiFetchRandomBible().then(data => {
+                OpenaiFetchWriteCache(data.vid, data.verse, data.book_name, data.inter, data.img)
+                    .then(data => {
+                        resolve(data)
+                    }).catch(e => 
+                        {
+                            console.log("error. " + e) 
+                        reject("error. " + e)
+                    })
+                autoResize("output")
+            }).catch(e => {
+                console.log("error. " + e)
+                reject(e)
+            })
+        }
+        catch(e){
+            console.log("error. " + e)
+            reject(e)
+        }
+    })
 }
 
 function sameSize(element, el2) {
