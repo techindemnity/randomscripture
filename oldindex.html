@@ -11,13 +11,13 @@
       type="image/x-icon"
       href="./styles/random-bible-verse-logo.png"
     />
+    <link rel="stylesheet" type="text/css" href="./styles/main.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" type="text/css" href="./styles/main.css" />
   </head>
   <script
     async
@@ -37,8 +37,7 @@
       <div class="container">
         <a href="#" class="navbar-brand">
           <!-- Logo Image -->
-          <img
-            class="logo"
+          <img class="logo"
             src="./styles/random-bible-verse-logo.png"
             alt="saas valuations and forecasting"
             class="d-inline-block align-middle mr-2"
@@ -67,9 +66,7 @@
               <a href="./index.html" class="nav-link">Random Bible Verse</a>
             </li>
             <li class="nav-item">
-              <a href="./saas-forecasting.html" class="nav-link"
-                >Prayer Request</a
-              >
+              <a href="./saas-forecasting.html" class="nav-link">Prayer Request</a>
             </li>
           </ul>
         </div>
@@ -80,68 +77,91 @@
         <div class="col-md-2"></div>
         <div class="col-md-8">
           <h1 class="display-3" id="header">Today's Random Bible Verse</h1>
-        </div>
-        <div class="col-md-2"></div>
-      </div>
-      <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-8 center-block">
-          <div class="card" style="width: 75%">
-            <div class="card-body">
-              <h5 class="card-title" id="book"></h5>
-              <p class="card-text" id="output">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-              <p class="card-text" id="ai"></p>
-              <a href="#" class="btn btn-primary">More About This Verse</a>
-              <a class="btn btn-primary" id="btnGet" href="#" role="button">
-                Get Another Random Verse
-              </a>
+          <div class="card-body wrapper headerhero">
+            <blockquote>
+              <p>Your word is a lamp to my feet and a light to my path...</p>
+              <footer class="blockquote-footer">
+                <cite title="Random Bible Verse Generator">Psalm 119:105</cite>
+              </footer>
+            </blockquote>
+            <div style="display: inline-block; vertical-align: top">
+              <img
+                class="heroImg"
+                src="./styles/jesus-random-bible-verse.png"
+                alt="random bible verse"
+              />
             </div>
-            <img
-              id="aiImg"
-              class="card-img-top"
-              src="..."
-              alt="random bible verse"
-            />
           </div>
-          <article>
-            <h1 class="display-6">
-              A Random Bible Verse, Can Give You Guidance
-            </h1>
-            <p>
-              There are a variety of reasons why people may search for random
-              Bible verses. Some people may do so as a way of seeking guidance
-              or inspiration in their daily lives. The Bible is a source of
-              wisdom and insight, and reading random verses can be a way of
-              finding hope, encouragement, and perspective in difficult
-              circumstances.
-            </p>
-            <p>
-              Others may search for random Bible verses as a way of deepening
-              their understanding of the Bible and its teachings. The Bible is a
-              rich and complex text, and reading different passages can help
-              people to gain a greater appreciation for its depth and
-              complexity.
-            </p>
-            <p>
-              Additionally, some people may search for random Bible verses as a
-              form of spiritual practice or devotion. Reading and reflecting on
-              the words of the Bible can be a way of connecting with God and
-              seeking a deeper relationship with Him.
-            </p>
-            <p>
-              Overall, the search for random Bible verses may be driven by a
-              desire for personal growth, spiritual nourishment, and a deeper
-              understanding of the Christian faith.
-            </p>
-          </article>
         </div>
         <div class="col-md-2"></div>
       </div>
     </div>
-    <hr/>
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+        <div class="rounded jumbotron">
+          <p id="pBtn" class="lead">
+            <a
+              class="btn btn-primary btn-lg"
+              id="btnGet"
+              href="#"
+              role="button"
+            >
+              Get Another Random Verse
+            </a>
+          </p>
+          <div id="jtHeader">
+            <h1 class="medium" id="book"></h1>
+            <p class="lead" id="output"></p>
+          </div>
+          <div id="Content" class="row">
+            <div id="txtContent" class="col-md-6">
+              <p id="ai" class="scro" />
+            </div>
+            <div id="imgContent" class="col-md-6">
+              <img id="aiImg" />
+            </div>
+          </div>
+        </div>
+        <!-- Button trigger modal -->
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-toggle="modal"
+          data-target="#exampleModalLong"
+        >
+          Launch demo modal
+        </button>
+        <article>
+          <h1 class="display-6">A Random Bible Verse, Can Give You Guidance</h1>
+          <p>
+            There are a variety of reasons why people may search for random
+            Bible verses. Some people may do so as a way of seeking guidance or
+            inspiration in their daily lives. The Bible is a source of wisdom
+            and insight, and reading random verses can be a way of finding hope,
+            encouragement, and perspective in difficult circumstances.
+          </p>
+          <p>
+            Others may search for random Bible verses as a way of deepening
+            their understanding of the Bible and its teachings. The Bible is a
+            rich and complex text, and reading different passages can help
+            people to gain a greater appreciation for its depth and complexity.
+          </p>
+          <p>
+            Additionally, some people may search for random Bible verses as a
+            form of spiritual practice or devotion. Reading and reflecting on
+            the words of the Bible can be a way of connecting with God and
+            seeking a deeper relationship with Him.
+          </p>
+          <p>
+            Overall, the search for random Bible verses may be driven by a
+            desire for personal growth, spiritual nourishment, and a deeper
+            understanding of the Christian faith.
+          </p>
+        </article>
+      </div>
+      <div class="col-md-2"></div>
+    </div>
     <iframe
       style="width: 98%"
       scrolling="no"

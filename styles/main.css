@@ -24,7 +24,20 @@
     margin-left: 2em;
 }
 
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: #C5A39E !important;
+}
+
 .wrapper {text-align: center;}
+
+.card-text{
+    font-size: 25px;
+}
+.card-title
+{
+    font-size: 30px;
+    color: #C5A39E;
+}
 
 blockquote {
     position: relative;
@@ -57,18 +70,27 @@ blockquote p {
     display: inline;
     text-align: left;
 }
-
+/**
 img{
     align: top;
     height: 200px;
     margin-left: 2em;
     border-radius: 30px;
+}**/
+.logo{
+    width:45px;
+    height:auto ;
 }
 #aiImg{
     width: 100%;
-    height: auto;
+    opacity: .75;
 }
-
+.card {
+        margin: 0 auto; /* Added */
+        float: none; /* Added */
+        margin-bottom: 10px; /* Added */
+        width: 25%;
+}
 #Content{
     text-align: center;
     align-content: center;
@@ -101,6 +123,8 @@ img{
 #header{
     text-align: center;
     color: #9CA7AD;
+    padding-top: .5em;
+    padding-bottom: 1em;
 }
 #pBtn{
     text-align: left;
