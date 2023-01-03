@@ -36,6 +36,9 @@ else {
     })
 }
 
+makeSameWidthLarger(document.getElementById("btnDetails"),document.getElementById("btnGet"))
+
+
 document.getElementById("activity1").style.display = 'none'
 document.getElementById("btnDetails").disabled = true;
 
@@ -72,40 +75,6 @@ async function getPassage() {
             reject(e)
         }
     })
-}
-
-function sameSize(element, el2) {
-    const tA = document.getElementById(el2)
-    document.getElementById(element).style.height = 'auto';
-    document.getElementById(element).style.height = tA.scrollHeight + 'px';
-    document.getElementById(element).style.width = 'auto';
-    document.getElementById(element).style.width = tA.scrollHeight + 'px';
-}
-
-function autoResize(element) {
-    const tA = document.getElementById(element)
-    tA.style.height = 'auto';
-    tA.style.height = tA.scrollHeight + 'px';
-}
-function hide(element) {
-    const x = document.getElementById(element)
-    try {
-        x.style.display = "none";
-    }
-    catch {
-        x.style.visibility = "hidden"
-    }
-
-}
-
-function show(element) {
-    const x = document.getElementById(element)
-    try {
-        x.style.display = "block";
-    }
-    catch {
-        x.style.visibility = "visible"
-    }
 }
 
 async function OpenaiFetchRandomBible() {
@@ -165,6 +134,7 @@ async function OpenaiFetchRandomBible() {
         });
     })
 }
+
 async function OpenaiFetchAPIText(inputMsg) {
     return new Promise((resolve, reject) => {
         inputMsg = "What is the meaning of " + inputMsg + " in the bible?"
@@ -201,6 +171,7 @@ async function OpenaiFetchAPIText(inputMsg) {
         });
     })
 }
+
 async function OpenaiFetchAPIIMG(inputMsg) {
     return new Promise((resolve, reject) => {
         inputMsg = "A landscape of an image of a scene in the Middle East representing: " + inputMsg + " by Winslow Homer"
@@ -277,6 +248,7 @@ function setContent(img, inter, verse, book_name){
     //show("Content")
     //show("imgContent")
 }
+
 function clearContent(){
     const imgElement = document.getElementById("aiImg")
     imgElement.src = ""
@@ -311,4 +283,60 @@ async function OpenaiFetchCache() {
             reject("Error retrieving data.")
         })
     })
+}
+
+
+//GENERIC STUFF TO MOVE
+function sameSize(element, el2) {
+    const tA = document.getElementById(el2)
+    document.getElementById(element).style.height = 'auto';
+    document.getElementById(element).style.height = tA.scrollHeight + 'px';
+    document.getElementById(element).style.width = 'auto';
+    document.getElementById(element).style.width = tA.scrollHeight + 'px';
+}
+
+function autoResize(element) {
+    const tA = document.getElementById(element)
+    tA.style.height = 'auto';
+    tA.style.height = tA.scrollHeight + 'px';
+}
+
+function hide(element) {
+    const x = document.getElementById(element)
+    try {
+        x.style.display = "none";
+    }
+    catch {
+        x.style.visibility = "hidden"
+    }
+
+}
+
+function show(element) {
+    const x = document.getElementById(element)
+    try {
+        x.style.display = "block";
+    }
+    catch {
+        x.style.visibility = "visible"
+    }
+}
+
+function makeSameWidthLarger(el1, el2) {
+  // Get the client rectangles for each element
+  const rect1 = el1.getBoundingClientRect();
+  const rect2 = el2.getBoundingClientRect();
+
+  // Determine which element is wider
+  let widerElement, narrowerElement;
+  if (rect1.width > rect2.width) {
+    widerElement = el1;
+    narrowerElement = el2;
+  } else {
+    widerElement = el2;
+    narrowerElement = el1;
+  }
+
+  // Set the width of the narrower element to match the wider element
+  narrowerElement.style.width = `${widerElement.offsetWidth}px`;
 }

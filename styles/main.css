@@ -1,3 +1,14 @@
+article{
+    margin-top: 3em;
+}
+iframe{
+    margin-bottom: 1em;
+    height: 225px
+}
+p{
+    text-justify: inter-word;
+    padding-right: 1em; 
+}
 .scr{
     font-weight: bold;
     padding-left: 1em;
@@ -44,58 +55,20 @@
     font-size: 30px;
     color: #C5A39E;
 }
-
-blockquote {
-    position: relative;
-    margin: 0 auto;
-    max-width: 500px;
-    font-style: italic;
-    margin-left: 1em;
-    font-family: Georgia, "Times New Roman", serif;
-    color: #C5A39E;
-    font-weight: bold;
-    display:inline-block
-}
-blockquote:before {
-  position: absolute;
-  content: open-quote;
-  font-size: 4em;
-  margin-left: -0.6em;
-  margin-top: -0.4em;
-}
-blockquote:after {
-  position: absolute;
-  content: close-quote;
-  font-size: 4em;
-  bottom: 0;
-  right: 0;
-  margin-right: -0.2em;
-  margin-bottom: -0.8em;
-}
-blockquote p {
-    display: inline;
-    text-align: left;
-}
-/**
-img{
-    align: top;
-    height: 200px;
-    margin-left: 2em;
-    border-radius: 30px;
-}**/
 .logo{
     width:45px;
     height:auto ;
 }
-#aiImg{
-    width: 100%;
-    opacity: .75;
-}
+
 .card {
         margin: 0 auto; /* Added */
         float: none; /* Added */
         margin-bottom: 10px; /* Added */
         width: 25%;
+}
+#aiImg{
+    width: 100%;
+    opacity: .75;
 }
 #Content{
     text-align: center;
@@ -139,18 +112,10 @@ img{
 #ai{
     heigh: auto;
 }
-article{
-    margin-top: 3em;
-}
 #footer{
     padding-top: 3em;
     padding-bottom: 2em;
 }
 #midFooter{
     background-color: #E9ECEF;
-}
-
-iframe{
-    margin-bottom: 1em;
-    height: 225px
 }
