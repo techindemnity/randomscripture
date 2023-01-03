@@ -37,6 +37,7 @@ else {
 }
 
 document.getElementById("activity1").style.display = 'none'
+document.getElementById("btnDetails").disabled = true;
 
 OpenaiFetchCache()
 .then(data => {
@@ -51,13 +52,15 @@ async function getPassage() {
             clearContent()
             OpenaiFetchRandomBible().then(data => {
                 OpenaiFetchWriteCache(data.vid, data.verse, data.book_name, data.inter, data.img)
-                    .then(data => {
-                        resolve(data)
-                    }).catch(e => 
-                        {
-                            console.log("error. " + e) 
-                        reject("error. " + e)
-                    })
+                    //dont wait for the response
+                    //.then(data => {
+                    //    resolve(data)
+                    //}).catch(e => 
+                    //    {
+                    //        console.log("error. " + e) 
+                    //    reject("error. " + e)
+                    //})
+                    resolve()    
                 autoResize("output")
             }).catch(e => {
                 console.log("error. " + e)
@@ -129,10 +132,12 @@ async function OpenaiFetchRandomBible() {
                 const b = document.getElementById("book")
                 if (b) {
                     b.innerHTML = addendum
-                    OpenaiFetchAPIText(addendum).then(data => {
-                        inter = data
-                        OpenaiFetchAPIIMG(addendum).then(data => {
-                            img = data   //_img = data
+                    document.getElementById("exampleModalLabel").innerHTML=addendum
+                    OpenaiFetchAPIIMG(addendum).then(data => {
+                        img = data
+                        OpenaiFetchAPIText(addendum).then(data => {
+                            inter = data
+                            document.getElementById("btnDetails").disabled = false;   
                             resolve(
                                 {
                                     book_name: _book_name,
@@ -266,6 +271,8 @@ function setContent(img, inter, verse, book_name){
     interVerseElement.innerHTML = inter
     const bnElement = document.getElementById("book")
     bnElement.innerHTML = book_name
+    document.getElementById("exampleModalLabel").innerHTML = book_name
+    document.getElementById("btnDetails").disabled = false;
     //show("jtHeader")
     //show("Content")
     //show("imgContent")
@@ -279,7 +286,7 @@ function clearContent(){
     interVerseElement.innerHTML = ""
     const bnElement = document.getElementById("book")
     bnElement.innerHTML = ""
-    //hide("jtHeader")
+    document.getElementById("btnDetails").disabled = true;
     //hide("Content")
     //hide("imgContent")
 }
