@@ -36,7 +36,7 @@ else {
     })
 }
 
-showIframe("cdnFooter")
+//showIframe("cdnFooter")
 
 makeSameWidthLarger(document.getElementById("btnDetails"),document.getElementById("btnGet"))
 
