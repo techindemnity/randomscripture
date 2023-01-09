@@ -9,7 +9,7 @@ const _n = 2
 const _urlBible = "https://rhmqa2opd3d7t6w4gu4gh4mwk40hwmgi.lambda-url.us-west-1.on.aws/"
 const _urlText = "https://hfxpk3gadabqzobfu6fnczky4i0ggynd.lambda-url.us-west-1.on.aws/"
 const _urlImg = "https://74xpx6m7khppxg4avsp5w667lq0vqqbk.lambda-url.us-west-1.on.aws/"
-const _urlWrite = "https://dj2ej4notnmxnlblhfjn66pk2m0ajbrc.lambda-url.us-west-1.on.aws/"
+const _urlWrite = "https://dezdj2h7vvvwsyi5rriohssnyy0cctip.lambda-url.us-west-1.on.aws/"
 const _urlCache = "https://tiacolll2fvdc6rb6ygcyab3x40mhlia.lambda-url.us-west-1.on.aws/"
 
 
@@ -35,6 +35,8 @@ else {
         })
     })
 }
+
+showIframe("cdnFooter")
 
 makeSameWidthLarger(document.getElementById("btnDetails"),document.getElementById("btnGet"))
 
@@ -217,7 +219,7 @@ async function OpenaiFetchWriteCache(vid, verse, book_name, inter, img) {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ "vid": vid, "book_name": book_name, "verse": verse, "inter": inter, "img": img }),
+            body: JSON.stringify({ "vid": vid, "book_name": book_name, "iter": inter, "verse": verse, "img": img }),
         }).then(response => {
 
             return response.json()
@@ -339,4 +341,20 @@ function makeSameWidthLarger(el1, el2) {
 
   // Set the width of the narrower element to match the wider element
   narrowerElement.style.width = `${widerElement.offsetWidth}px`;
+}
+function showIframe(e) {
+    var iframe = document.getElementById(e);
+
+    // Get the iframe's content window
+    var contentWindow = iframe.contentWindow;
+
+    // Get the iframe's document
+    var doc = contentWindow.document;
+
+    // Get the iframe's body element
+    var body = doc.body;
+
+    // Set the height and width of the iframe to match the body element's height and width
+    iframe.height = body.scrollHeight;
+    iframe.width = body.scrollWidth;
 }
