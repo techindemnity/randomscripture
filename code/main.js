@@ -9,7 +9,7 @@ const _n = 2
 const _urlBible = "https://rhmqa2opd3d7t6w4gu4gh4mwk40hwmgi.lambda-url.us-west-1.on.aws/"
 const _urlText = "https://hfxpk3gadabqzobfu6fnczky4i0ggynd.lambda-url.us-west-1.on.aws/"
 const _urlImg = "https://74xpx6m7khppxg4avsp5w667lq0vqqbk.lambda-url.us-west-1.on.aws/"
-const _urlWrite = "https://dezdj2h7vvvwsyi5rriohssnyy0cctip.lambda-url.us-west-1.on.aws/"
+const _urlWrite = "https://jvosl2e25sieg7vx6jkugnv4z40jnjwl.lambda-url.us-west-1.on.aws/"
 const _urlCache = "https://tiacolll2fvdc6rb6ygcyab3x40mhlia.lambda-url.us-west-1.on.aws/"
 
 
