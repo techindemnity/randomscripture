@@ -56,15 +56,16 @@ async function getPassage() {
         try{
             clearContent()
             OpenaiFetchRandomBible().then(data => {
+                autoResize("output")
                 OpenaiFetchWriteCache(data.vid, data.verse, data.book_name, data.inter, data.img)
                     //dont wait for the response
-                    .then(data => {
-                        resolve(data)
-                    }).catch(e => 
-                        {
-                            console.log("error. " + e) 
-                        reject("error. " + e)
-                    })
+                    //.then(data => {
+                    //    resolve(data)
+                    //}).catch(e => 
+                    //    {
+                    //        console.log("error. " + e) 
+                    //    reject("error. " + e)
+                    //})
                     resolve()    
                 autoResize("output")
             }).catch(e => {
