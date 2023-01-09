@@ -58,13 +58,13 @@ async function getPassage() {
             OpenaiFetchRandomBible().then(data => {
                 OpenaiFetchWriteCache(data.vid, data.verse, data.book_name, data.inter, data.img)
                     //dont wait for the response
-                    //.then(data => {
-                    //    resolve(data)
-                    //}).catch(e => 
-                    //    {
-                    //        console.log("error. " + e) 
-                    //    reject("error. " + e)
-                    //})
+                    .then(data => {
+                        resolve(data)
+                    }).catch(e => 
+                        {
+                            console.log("error. " + e) 
+                        reject("error. " + e)
+                    })
                     resolve()    
                 autoResize("output")
             }).catch(e => {
@@ -213,6 +213,7 @@ async function OpenaiFetchAPIIMG(inputMsg) {
 async function OpenaiFetchWriteCache(vid, verse, book_name, inter, img) {
     //console.log(JSON.stringify({ "vid": vid, "book_name": book_name, "verse": verse, "inter": inter, "img": img }))
     return new Promise((resolve, reject) => {
+        console.log(JSON.stringify({ "vid": vid, "book_name": book_name, "iter": inter, "verse": verse, "img": img }))
         var url = _urlWrite
         fetch(url, {
             method: 'POST',
