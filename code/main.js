@@ -154,6 +154,7 @@ async function OpenaiFetchAPIText(inputMsg) {
             return response.json()
 
         }).then(data => {
+            console.log(JSON.stringify(data))
             const p = document.getElementById("ai")
             if (p) {
                 console.log(data)
