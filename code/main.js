@@ -157,8 +157,8 @@ async function OpenaiFetchAPIText(inputMsg) {
             const p = document.getElementById("ai")
             if (p) {
                 console.log(data)
-                p.innerHTML = data;
-                _inter = data
+                p.innerHTML = data.data;
+                _inter = data.data
                 resolve(_inter)
             }
             else {
